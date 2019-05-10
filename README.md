@@ -1,3 +1,3 @@
 # project-lvl1-s486
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/42c3572b671b8e95ab87/maintainability)](https://codeclimate.com/github/TheJubadze/project-lvl1-s486/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/42c3572b671b8e95ab87/test_coverage)](https://codeclimate.com/github/TheJubadze/project-lvl1-s486/test_coverage)
