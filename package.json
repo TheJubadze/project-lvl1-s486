@@ -1,6 +1,6 @@
 {
   "name": "brain-games-vsenokosov",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Brain Games - Hexlet",
   "main": "index.js",
   "bin": {
@@ -25,6 +25,10 @@
   },
   "homepage": "https://github.com/TheJubadze/project-lvl1-s486#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "@babel/node": "7.2.2",
+    "@babel/core": "7.4.3",
+    "@babel/preset-env": "7.4.3",
+    "@babel/cli": "7.4.3",
+    "readline-sync": "^1.4.9"
   }
 }

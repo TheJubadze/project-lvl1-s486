@@ -1,4 +1,6 @@
 #!/bin/sh
 ':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
 
-console.log("Welcome to the Brain Games!");
+import name from '..';
+
+console.log(`Hello, ${name}!`);
