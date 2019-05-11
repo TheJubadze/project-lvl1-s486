@@ -1,4 +1,7 @@
 language: node_js
 node_js:
-  - "7"
-script: make lint
+  - node
+
+script:
+  - make lint
+  - make test
