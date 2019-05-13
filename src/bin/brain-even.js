@@ -14,7 +14,7 @@ const checkAnswer = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
     return 1;
   }
-  console.log(`'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}.\nLet's try again, ${name}!`);
+  console.log(`'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
   return 0;
 };
 
