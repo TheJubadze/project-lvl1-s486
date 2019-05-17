@@ -7,6 +7,7 @@ const correctAnswersEnough = 3;
 
 const checkAnswer = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
+    console.log('Correct!');
     return 1;
   }
   console.log(`'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
@@ -23,7 +24,10 @@ const game = (run) => {
     console.log(`Question: ${question}!`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    repeat(acc + checkAnswer(userAnswer, correctAnswer));
+    if (checkAnswer(userAnswer, correctAnswer) === 0) {
+      return;
+    }
+    repeat(acc + 1);
   };
 
   repeat(0);

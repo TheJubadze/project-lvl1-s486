@@ -1,6 +1,6 @@
 {
   "name": "brain-games-vsenokosov",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Brain Games - Hexlet",
   "main": "index.js",
   "bin": {
