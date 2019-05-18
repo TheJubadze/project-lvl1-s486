@@ -3,6 +3,7 @@ import game from '../game-engine';
 import random from '../random';
 
 const maxN = 100;
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number <= 1) {
@@ -33,4 +34,4 @@ game(() => {
     question: `${n}`,
     answer: `${((isPrime(n)) ? 'yes' : 'no')}`,
   };
-});
+}, gameRules);

@@ -3,6 +3,7 @@ import game from '../game-engine';
 import random from '../random';
 
 const maxRandom = 100;
+const gameRules = 'What is the result of the expression?';
 const operations = [
   {
     sign: '+',
@@ -26,4 +27,4 @@ game(() => {
     question: `${a} ${operation.sign} ${b}`,
     answer: `${operation.execute(a, b)}`,
   };
-});
+}, gameRules);

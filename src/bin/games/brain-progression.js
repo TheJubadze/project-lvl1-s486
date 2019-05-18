@@ -4,6 +4,7 @@ import random, { randomFromTo } from '../random';
 
 const progressionLength = 10;
 const progressionStep = randomFromTo(2, 10);
+const gameRules = 'What number is missing in the progression?';
 
 game(() => {
   const startValue = random(100);
@@ -14,4 +15,4 @@ game(() => {
     question: progression.join(' '),
     answer: `${startValue + skippedIndex * progressionStep}`,
   };
-});
+}, gameRules);
