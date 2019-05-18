@@ -2,8 +2,8 @@
 import game from '../game-engine';
 import random from '../random';
 
-const maxN = 100;
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const maxN = 100;
 
 const isPrime = (number) => {
   if (number <= 1) {

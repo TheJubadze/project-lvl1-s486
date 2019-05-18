@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 import game from '../game-engine';
-import random from '../random';
+import { randomFromTo } from '../random';
 
-const maxRandom = 100;
 const gameRules = 'Find the greatest common divisor of given numbers.';
+const minRandom = 1;
+const maxRandom = 100;
 const gcd = (a, b) => (!b ? a : gcd(b, a % b));
 
 game(() => {
-  const a = random(maxRandom);
-  const b = random(maxRandom);
+  const a = randomFromTo(minRandom, maxRandom);
+  const b = randomFromTo(minRandom, maxRandom);
   return {
     question: `${a} ${b}`,
     answer: `${gcd(a, b)}`,

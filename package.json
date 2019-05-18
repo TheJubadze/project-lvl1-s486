@@ -1,7 +1,8 @@
 {
   "name": "brain-games-vsenokosov",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Brain Games - Hexlet",
+  "keywords": ["hexlet", "brain", "games", "project"],
   "main": "index.js",
   "bin": {
     "brain-even": "dist/bin/games/brain-even.js",
@@ -22,7 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/TheJubadze/project-lvl1-s486.git"
   },
-  "author": "",
+  "author": "Vitaly Senokosov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TheJubadze/project-lvl1-s486/issues"

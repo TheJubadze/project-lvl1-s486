@@ -2,8 +2,8 @@
 import game from '../game-engine';
 import random from '../random';
 
-const maxRandom = 100;
 const gameRules = 'What is the result of the expression?';
+const maxRandom = 100;
 const operations = [
   {
     sign: '+',

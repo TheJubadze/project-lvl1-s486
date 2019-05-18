@@ -2,8 +2,8 @@
 import game from '../game-engine';
 import random from '../random';
 
-const maxRandom = 100;
 const gameRules = 'Answer "yes" if number even otherwise answer "no".';
+const maxRandom = 100;
 
 game(() => {
   const a = random(maxRandom);
