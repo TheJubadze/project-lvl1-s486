@@ -25,7 +25,7 @@ const isPrime = (number) => {
 
   return true;
 };
-const gameProcess = () => {
+const runGame = () => {
   const n = random(0, maxN);
   return {
     question: `${n}`,
@@ -33,4 +33,4 @@ const gameProcess = () => {
   };
 };
 
-export default () => game(gameProcess, gameDescription);
+export default () => game(runGame, gameDescription);

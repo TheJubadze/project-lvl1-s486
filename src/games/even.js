@@ -4,7 +4,7 @@ import random from '../random';
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = a => ((a % 2 === 0) ? 'yes' : 'no');
 const maxRandom = 100;
-const gameProcess = () => {
+const runGame = () => {
   const number = random(0, maxRandom);
   return {
     question: `${number}`,
@@ -12,4 +12,4 @@ const gameProcess = () => {
   };
 };
 
-export default () => game(gameProcess, gameDescription);
+export default () => game(runGame, gameDescription);

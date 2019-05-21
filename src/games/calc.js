@@ -17,7 +17,7 @@ const operations = [
     execute: (a, b) => a * b,
   },
 ];
-const gameProcess = () => {
+const runGame = () => {
   const a = random(0, maxRandom);
   const b = random(0, maxRandom);
   const operation = operations[random(0, operations.length)];
@@ -27,4 +27,4 @@ const gameProcess = () => {
   };
 };
 
-export default () => game(gameProcess, gameDescription);
+export default () => game(runGame, gameDescription);
