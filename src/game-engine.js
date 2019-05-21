@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+
 const correctAnswersEnough = 3;
 
 const game = (run, gameRules) => {
