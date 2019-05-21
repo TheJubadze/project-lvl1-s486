@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-
 const correctAnswersEnough = 3;
 
 const game = (run, gameRules) => {
@@ -7,8 +6,8 @@ const game = (run, gameRules) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
 
-  const repeat = (acc) => {
-    if (acc === correctAnswersEnough) {
+  const iter = (tryNumber) => {
+    if (tryNumber === correctAnswersEnough) {
       console.log(`Congratulations, ${name}!`);
       return;
     }
@@ -17,15 +16,16 @@ const game = (run, gameRules) => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      console.log(`'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
 
     console.log('Correct!');
-    repeat(acc + 1);
+    iter(tryNumber + 1);
   };
 
-  repeat(0);
+  iter(0);
 };
 
 export default game;

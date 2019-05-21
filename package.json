@@ -1,15 +1,20 @@
 {
   "name": "brain-games-vsenokosov",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Brain Games - Hexlet",
-  "keywords": ["hexlet", "brain", "games", "project"],
+  "keywords": [
+    "hexlet",
+    "brain",
+    "games",
+    "project"
+  ],
   "main": "index.js",
   "bin": {
-    "brain-even": "dist/bin/games/brain-even.js",
-    "brain-calc": "dist/bin/games/brain-calc.js",
-    "brain-gcd": "dist/bin/games/brain-gcd.js",
-    "brain-progression": "dist/bin/games/brain-progression.js",
-    "brain-prime": "dist/bin/games/brain-prime.js"
+    "brain-even": "dist/bin/even.js",
+    "brain-calc": "dist/bin/calc.js",
+    "brain-gcd": "dist/bin/gcd.js",
+    "brain-progression": "dist/bin/progression.js",
+    "brain-prime": "dist/bin/prime.js"
   },
   "files": [
     "dist"

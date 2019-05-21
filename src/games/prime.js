@@ -1,10 +1,8 @@
-#!/usr/bin/env node
 import game from '../game-engine';
 import random from '../random';
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const maxN = 100;
-
 const isPrime = (number) => {
   if (number <= 1) {
     return false;
@@ -27,11 +25,12 @@ const isPrime = (number) => {
 
   return true;
 };
-
-game(() => {
-  const n = random(maxN);
+const gameProcess = () => {
+  const n = random(0, maxN);
   return {
     question: `${n}`,
     answer: `${((isPrime(n)) ? 'yes' : 'no')}`,
   };
-}, gameRules);
+};
+
+export default () => game(gameProcess, gameDescription);

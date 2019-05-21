@@ -1,8 +1,7 @@
-#!/usr/bin/env node
 import game from '../game-engine';
 import random from '../random';
 
-const gameRules = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 const maxRandom = 100;
 const operations = [
   {
@@ -18,13 +17,14 @@ const operations = [
     execute: (a, b) => a * b,
   },
 ];
-
-game(() => {
-  const a = random(maxRandom);
-  const b = random(maxRandom);
-  const operation = operations[random(operations.length)];
+const gameProcess = () => {
+  const a = random(0, maxRandom);
+  const b = random(0, maxRandom);
+  const operation = operations[random(0, operations.length)];
   return {
     question: `${a} ${operation.sign} ${b}`,
     answer: `${operation.execute(a, b)}`,
   };
-}, gameRules);
+};
+
+export default () => game(gameProcess, gameDescription);
