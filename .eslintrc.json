@@ -1,8 +1,7 @@
 {
     "plugins": [ "jest", "babel" ],
     "env":{
-        "node": true,
-        "jest": true
+        "node": true
     },
     "parser": "babel-eslint",
     "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:lodash-fp/recommended"],

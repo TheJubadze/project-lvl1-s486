@@ -1,36 +1,25 @@
-import game from '../game-engine';
+import runGame from '../game-engine';
 import random from '../random';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const maxN = 100;
+const maxNumber = 100;
 const isPrime = (number) => {
-  if (number <= 1) {
-    return false;
-  }
-
-  // The check for the number 2 and 3
-  if (number <= 3) {
-    return true;
-  }
-
-  if (number % 2 === 0 || number % 3 === 0) {
-    return false;
-  }
-
-  for (let i = 5; i * i <= number; i += 6) {
-    if (number % i === 0 || number % (i + 2) === 0) {
-      return false;
+  let prime = true;
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
+      prime = false;
+      break;
     }
   }
-
-  return true;
+  return prime && (number > 1);
 };
-const runGame = () => {
-  const n = random(0, maxN);
+
+const getGameObject = () => {
+  const gameQuestionNumber = random(0, maxNumber);
   return {
-    question: `${n}`,
-    answer: `${((isPrime(n)) ? 'yes' : 'no')}`,
+    question: gameQuestionNumber,
+    answer: isPrime(gameQuestionNumber) ? 'yes' : 'no',
   };
 };
 
-export default () => game(runGame, gameDescription);
+export default () => runGame(getGameObject, gameDescription);

@@ -1,18 +1,23 @@
-import game from '../game-engine';
+import runGame from '../game-engine';
 import random from '../random';
 
 const gameDescription = 'What number is missing in the progression?';
-const progressionLength = random(8, 16);
-const progressionStep = random(2, 10);
-const runGame = () => {
+const length = random(8, 16);
+const step = random(2, 10);
+const getGameObject = () => {
   const startValue = random(0, 100);
-  const skippedIndex = random(0, progressionLength);
-  const progression = [...Array(progressionLength)].map((_, i) => startValue + i * progressionStep);
-  progression[skippedIndex] = '..';
+  const indexOfSkippedElement = random(0, length);
+
+  // Комментарий ментора: Модуль lodash у вас расположен в секции для разработки. При загрузке пакета пользователем эта функция не заработает.
+  // Не могли бы, пожалуйста, объянить подробнее, в каком месте здесь у меня используется модуль lodash? Я старался обойтись лишь прототипом Array.
+  // А в pachage.json прописан только eslint-plugin-lodash-fp. Вы его имеете в виду? Спасибо.
+  // ЗЫ: Подскажите, пожалуйста, куда можно писать вопросы по шагу "Ментор", ибо там отсутствует форма "Вопросы". Спасибо.
+  const progression = [...Array(length)].map((_, i) => startValue + i * step);
+  progression[indexOfSkippedElement] = '..';
   return {
     question: progression.join(' '),
-    answer: `${startValue + skippedIndex * progressionStep}`,
+    answer: (startValue + indexOfSkippedElement * step).toString(),
   };
 };
 
-export default () => game(runGame, gameDescription);
+export default () => runGame(getGameObject, gameDescription);
