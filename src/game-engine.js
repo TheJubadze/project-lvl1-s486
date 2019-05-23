@@ -3,12 +3,13 @@ import readlineSync from 'readline-sync';
 const correctAnswersEnough = 3;
 
 export default (runGame, gameDescription) => {
-  console.log(`\nWelcome to the Brain Games!\n${gameDescription}\n`);
+  console.log('\nWelcome to the Brain Games!');
+  console.log(gameDescription);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
 
-  const iter = (correctAnswersCount) => {
-    if (correctAnswersCount === correctAnswersEnough) {
+  const iter = (counter) => {
+    if (counter === correctAnswersEnough) {
       console.log(`Congratulations, ${name}!`);
       return;
     }
@@ -23,7 +24,7 @@ export default (runGame, gameDescription) => {
     }
 
     console.log('Correct!');
-    iter(correctAnswersCount + 1);
+    iter(counter + 1);
   };
 
   iter(0);

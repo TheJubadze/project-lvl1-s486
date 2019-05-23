@@ -17,7 +17,7 @@ const operations = [
     execute: (a, b) => a * b,
   },
 ];
-const getGameObject = () => {
+const generateGameData = () => {
   const a = random(0, maxRandom);
   const b = random(0, maxRandom);
   const operation = operations[random(0, operations.length)];
@@ -27,4 +27,4 @@ const getGameObject = () => {
   };
 };
 
-export default () => runGame(getGameObject, gameDescription);
+export default () => runGame(generateGameData, gameDescription);

@@ -4,8 +4,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/42c3572b671b8e95ab87/maintainability)](https://codeclimate.com/github/TheJubadze/project-lvl1-s486/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/42c3572b671b8e95ab87/test_coverage)](https://codeclimate.com/github/TheJubadze/project-lvl1-s486/test_coverage)
-
 brain-even:
 [![asciicast](https://asciinema.org/a/hsZdGNimxv1tZtc3IePm5hfh9.svg)](https://asciinema.org/a/hsZdGNimxv1tZtc3IePm5hfh9)
 

@@ -4,22 +4,15 @@ import random from '../random';
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const maxNumber = 100;
 const isPrime = (number) => {
-  let prime = true;
-  for (let i = 2; i <= Math.sqrt(number); i += 1) {
-    if (number % i === 0) {
-      prime = false;
-      break;
-    }
+  for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
+    if (number % i === 0) return false;
   }
-  return prime && (number > 1);
+  return number > 1;
 };
 
-const getGameObject = () => {
-  const gameQuestionNumber = random(0, maxNumber);
-  return {
-    question: gameQuestionNumber,
-    answer: isPrime(gameQuestionNumber) ? 'yes' : 'no',
-  };
+const generateGameData = () => {
+  const question = random(0, maxNumber);
+  return { question, answer: isPrime(question) ? 'yes' : 'no' };
 };
 
-export default () => runGame(getGameObject, gameDescription);
+export default () => runGame(generateGameData, gameDescription);

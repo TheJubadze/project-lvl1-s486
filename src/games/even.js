@@ -4,12 +4,9 @@ import random from '../random';
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = a => a % 2 === 0;
 const maxRandom = 100;
-const getGameObject = () => {
-  const gameQuestionNumber = random(0, maxRandom);
-  return {
-    question: gameQuestionNumber,
-    answer: isEven(gameQuestionNumber) ? 'yes' : 'no',
-  };
+const generateGameData = () => {
+  const question = random(0, maxRandom);
+  return { question, answer: isEven(question) ? 'yes' : 'no' };
 };
 
-export default () => runGame(getGameObject, gameDescription);
+export default () => runGame(generateGameData, gameDescription);
