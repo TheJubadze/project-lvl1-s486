@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import game from '../games/prime';
+import runGame from '../games/prime';
 
-game();
+runGame();
